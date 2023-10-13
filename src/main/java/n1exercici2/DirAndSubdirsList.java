@@ -4,15 +4,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class Main {
+public class DirAndSubdirsList {
     public static void main(String[] args) throws IOException{
 
-    Path fileDir = Path.of("D:\\Programacion");
-    MyFileVisitor visitor = new MyFileVisitor();
+    Path fileDir = Path.of("E:\\Programacion");
+    MyFileVisitor2 visitor = new MyFileVisitor2();
 
         Files.walkFileTree(fileDir,visitor);
-
-
 
     }
 }

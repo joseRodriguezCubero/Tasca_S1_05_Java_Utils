@@ -1,31 +1,31 @@
 package n1exercici2;
 
+import n1exercici1.DirectoryList;
+
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 
-public class MyFileVisitor extends SimpleFileVisitor<Path> {
+public class MyFileVisitor2 extends SimpleFileVisitor<Path> {
 
 
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-        System.out.print(dir.getFileName() + " entrando ");
+        DirectoryList directoryList = new DirectoryList(dir);
+        directoryList.DrirectoryOrdering();
         return FileVisitResult.CONTINUE;
     }
 
     @Override
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-        System.out.println(dir.getFileName() + " saliendo ");
+
         return FileVisitResult.CONTINUE;
     }
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        if(attrs.isRegularFile()){
-            System.out.println(file);
-        }
         return FileVisitResult.CONTINUE;
     }
 
