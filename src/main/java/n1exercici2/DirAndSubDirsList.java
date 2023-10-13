@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class DirAndSubdirsList {
+
+public class DirAndSubDirsList {
     public static void main(String[] args) throws IOException{
 
     Path fileDir = Path.of("E:\\Programacion");

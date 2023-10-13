@@ -8,8 +8,6 @@ public class Main {
 
         DirectoryList directoryList = new DirectoryList(Path.of("D:\\") );
 
-        directoryList.DrirectoryOrdering();
-
-
+        directoryList.DirectoryOrdering();
     }
 }
