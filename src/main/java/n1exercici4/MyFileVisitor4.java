@@ -1,18 +1,25 @@
-package n1exercici3;
+package n1exercici4;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
-import static n1exercici3.DirListAndPrint.appendUsingBufferedWriter;
 
-public class MyFileVisitor3 extends SimpleFileVisitor<Path> {
+
+
+
+public class MyFileVisitor4 extends SimpleFileVisitor<Path> {
+
+   private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-        DirectoryList2 directoryList2 = new DirectoryList2(dir);
-        String appendText = directoryList2.DrirectoryOrdering();
-        appendUsingBufferedWriter("E:\\Programacion\\directories.txt", appendText, 1);
+
         return FileVisitResult.CONTINUE;
     }
 
@@ -24,8 +31,13 @@ public class MyFileVisitor3 extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+            if (file.getFileName().endsWith(name)){
+                FileReader.reading(file.toString());
+            }
         return FileVisitResult.CONTINUE;
     }
+
+
 
     @Override
     public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {

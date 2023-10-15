@@ -29,33 +29,31 @@ public class DirectoryList {
         File parentDir;
 
         parentDir = FileUtils.getFile(new String[]{dir.toString()});
-        NameFileComparator comparator = new NameFileComparator(IOCase.SENSITIVE);
+        NameFileComparator comparator = new NameFileComparator(IOCase.INSENSITIVE);
         File[] sortedFiles = comparator.sort(parentDir.listFiles());
 
         System.out.println("directory: "+dir);
         for (File file : sortedFiles) {
-            //Date fecha = new Date(file.lastModified());
-            //fecha.toLocalDate();
 
             long ms = file.lastModified();
             Date d = new Date(ms);
             Calendar c = new GregorianCalendar();
             c.setTime(d);
 
-            String dia= Integer.toString(c.get(Calendar.DATE));
-            String mes = Integer.toString(c.get(Calendar.MONTH));
-            String annio = Integer.toString(c.get(Calendar.YEAR));
+            String day= Integer.toString(c.get(Calendar.DATE));
+            String month = Integer.toString(c.get(Calendar.MONTH));
+            String year = Integer.toString(c.get(Calendar.YEAR));
             String hour= Integer.toString(c.get(Calendar.HOUR_OF_DAY));
-            String minuto = Integer.toString(c.get(Calendar.MINUTE));
-            String segundo = Integer.toString(c.get(Calendar.SECOND));
+            String minute = Integer.toString(c.get(Calendar.MINUTE));
+            String seconds = Integer.toString(c.get(Calendar.SECOND));
 
-            String fecha = dia+"/"+mes+"/"+annio+" "+hour+":"+minuto+":"+segundo
+            String fecha = day+"/"+month+"/"+year+" "+hour+":"+minute+":"+seconds
 
 
             ; if(file.isDirectory()) {
-                System.out.println("\t(D)" + file.getName() +" "+file.lastModified()+" "+fecha);
+                System.out.println("\t(D)" + file.getName() +" "+fecha);
             }else{
-                System.out.println("\t(F)" + file.getName()+" "+file.lastModified()+" "+fecha);
+                System.out.println("\t(F)" + file.getName()+" "+fecha);
             }
         }
     }
