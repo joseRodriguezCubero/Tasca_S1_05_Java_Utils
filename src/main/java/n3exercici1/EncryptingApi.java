@@ -17,13 +17,10 @@ public class EncryptingApi {
 
         FileEncrypterDecrypter fileEncrypterDecrypter = new FileEncrypterDecrypter(secretKey, "AES/CBC/PKCS5Padding");
 
-        // Leer todo el contenido del archivo
         String contenidoOriginal = leerContenido("E:\\Programacion\\directories.txt");
 
-        // Cifrar y escribir el contenido cifrado en un nuevo archivo
         fileEncrypterDecrypter.encrypt(contenidoOriginal, "E:\\Programacion\\directories_cifrado.txt");
 
-        // Desencriptar el archivo cifrado (solo para verificar)
         String contenidoDesencriptado = fileEncrypterDecrypter.decrypt("E:\\Programacion\\directories_cifrado.txt");
         System.out.println("Contenido desencriptado:\n" + contenidoDesencriptado);
     }
