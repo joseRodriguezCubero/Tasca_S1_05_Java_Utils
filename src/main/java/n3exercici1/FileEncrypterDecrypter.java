@@ -7,17 +7,17 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
-class FileEncrypterDecrypter {
+public class FileEncrypterDecrypter {
 
     private SecretKey secretKey;
     private Cipher cipher;
 
-    FileEncrypterDecrypter(SecretKey secretKey, String cipher) throws NoSuchPaddingException, NoSuchAlgorithmException {
+    public FileEncrypterDecrypter(SecretKey secretKey, String cipher) throws NoSuchPaddingException, NoSuchAlgorithmException {
         this.secretKey = secretKey;
         this.cipher = Cipher.getInstance(cipher);
     }
 
-    void encrypt(String content, String fileName) throws InvalidKeyException, IOException {
+    public void encrypt(String content, String fileName) throws InvalidKeyException, IOException {
         cipher.init(Cipher.ENCRYPT_MODE, secretKey);
         byte[] iv = cipher.getIV();
 
@@ -31,7 +31,7 @@ class FileEncrypterDecrypter {
 
     }
 
-    String decrypt(String fileName) throws InvalidAlgorithmParameterException, InvalidKeyException, IOException {
+    public String decrypt(String fileName) throws InvalidAlgorithmParameterException, InvalidKeyException, IOException {
 
         String content;
 
