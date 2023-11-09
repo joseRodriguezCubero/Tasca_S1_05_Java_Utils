@@ -66,8 +66,11 @@ A little intro about running the program.
 $ git clone https://github.com/joseRodriguezCubero/Tasca_S1_05_Java_Utils.git
 $ cd Documents[Java-program-folder]
 $ ../path/to/the/file
-$ javac Main
-$ java Main
+```
+Run these commands for each exercise folder.
+```
+$ javac -encoding UTF-8 -d .\bin -cp .\src .src\main\java\n1exercici1\Main.java
+$ java -cp bin Main.Main
 ```
 Side information: To use the application in a special environment use ```eclipse``` or ```inetelijj``` or something similiar to build the program.
 
