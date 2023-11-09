@@ -78,8 +78,11 @@ Side information: To use the application in a special environment use ```eclipse
 ***
 A list of frequently asked questions
 1. **How to run the program from the command line?**
+
 tutorial to run java classes from the command line; [link](https://vidatecno.net/como-ejecutar-un-programa-java-desde-el-simbolo-del-sistema/). 
+
 2. __In what order should I run the files?__ 
+
 It is recommended to go according to the directory numbering order:
 * n1exercici1
 * n1exercici2
