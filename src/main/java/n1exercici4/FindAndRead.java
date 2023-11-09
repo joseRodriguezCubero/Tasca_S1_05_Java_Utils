@@ -4,17 +4,19 @@ package n1exercici4;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 
 public class FindAndRead {
 
     public static void main(String[] args) throws IOException {
-        String name = Entrada.leerString("introduzca nombre de archivo")+".txt";
+        String name = Entrada.leerString("introduzca nombre de archivo de su escritorio")+".txt";
 
-        Path fileDir = Path.of("E:\\");
-        MyFileVisitor4 visitor = new MyFileVisitor4();
-        visitor.setName(name);
-        Files.walkFileTree(fileDir,visitor);
+        String desktopPath = System.getProperty("user.home") + "/Desktop";
+        Path desktop = Path.of(desktopPath);
+
+        MyFileVistor4 visitor = new MyFileVistor4(name, desktop);
+        Files.walkFileTree(desktop, visitor);
 
     }
 }

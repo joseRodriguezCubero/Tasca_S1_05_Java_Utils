@@ -1,6 +1,7 @@
 package n1exercici3;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
@@ -12,7 +13,8 @@ public class MyFileVisitor3 extends SimpleFileVisitor<Path> {
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
         DirectoryList2 directoryList2 = new DirectoryList2(dir);
         String appendText = directoryList2.DrirectoryOrdering();
-        appendUsingBufferedWriter("E:\\Programacion\\directories.txt", appendText, 1);
+        String desktopPath = System.getProperty("user.home") + "/Desktop/directories.txt";
+        appendUsingBufferedWriter(desktopPath, appendText, 1);
         return FileVisitResult.CONTINUE;
     }
 

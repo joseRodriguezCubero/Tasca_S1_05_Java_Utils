@@ -1,22 +1,16 @@
 package n1exercici1;
 
-
 import java.io.File;
 import java.nio.file.Path;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOCase;
 import org.apache.commons.io.comparator.NameFileComparator;
-import java.nio.file.attribute.FileTime;
 import java.sql.Date;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.concurrent.TimeUnit;
+
 
 public class DirectoryList {
-
-
 
     private final Path dir;
 
