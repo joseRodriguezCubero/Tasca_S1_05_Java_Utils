@@ -17,11 +17,11 @@ public class EncryptingApi {
 
         FileEncrypterDecrypter fileEncrypterDecrypter = new FileEncrypterDecrypter(secretKey, "AES/CBC/PKCS5Padding");
 
-        String contenidoOriginal = leerContenido("E:\\Programacion\\directories.txt");
+        String contenidoOriginal = leerContenido("src/main/java/n2exercici1/directories.txt");
 
-        fileEncrypterDecrypter.encrypt(contenidoOriginal, "E:\\Programacion\\directories_cifrado.txt");
+        fileEncrypterDecrypter.encrypt(contenidoOriginal, "src/main/java/n2exercici1/directories_cifrado.txt");
 
-        String contenidoDesencriptado = fileEncrypterDecrypter.decrypt("E:\\Programacion\\directories_cifrado.txt");
+        String contenidoDesencriptado = fileEncrypterDecrypter.decrypt("src/main/java/n2exercici1/directories_cifrado.txt");
         System.out.println("Contenido desencriptado:\n" + contenidoDesencriptado);
     }
 

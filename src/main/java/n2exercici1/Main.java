@@ -9,7 +9,7 @@ import java.util.Properties;
 public class Main {
     public static void main(String[] args) throws IOException {
         Properties prop = new Properties();
-        try (FileInputStream input = new FileInputStream("..\\n2exercici1\\config.properties")) {
+        try (FileInputStream input = new FileInputStream("src/main/java/n2exercici1/config.properties")) {
             prop.load(input);
         } catch (Exception e) {
             System.out.println("No se ha cargado el fichero de configuración " + e.getMessage());

@@ -15,7 +15,7 @@ public class MyFileVisitor3 extends SimpleFileVisitor<Path> {
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
 
         Properties prop = new Properties();
-        try (FileInputStream input = new FileInputStream("C:\\Users\\rince\\Documents\\Programacion\\Intellij\\Sprint1\\Tasca_S1_05_Java_Utils\\src\\main\\java\\n2exercici1\\config.properties")) {
+        try (FileInputStream input = new FileInputStream("src/main/java/n2exercici1/config.properties")) {
             prop.load(input);
         } catch (Exception e) {
             System.out.println("No se ha cargado el fichero de configuración " + e.getMessage());
