@@ -10,7 +10,7 @@ import java.security.NoSuchAlgorithmException;
 
 //Este ejercicio ha sido realizado con la ayuda de la siguiente web. https://www.baeldung.com/java-aes-encryption-decryption
 
-public class EncryptingApi {
+public class Main {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
 
         SecretKey secretKey = AESUtils.generateKey(256);

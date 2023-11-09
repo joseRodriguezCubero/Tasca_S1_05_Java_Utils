@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 
-public class DirAndSubDirsList {
+public class Main {
     public static void main(String[] args) throws IOException{
 
     Path fileDir = Path.of("\\Program Files (x86)\\");

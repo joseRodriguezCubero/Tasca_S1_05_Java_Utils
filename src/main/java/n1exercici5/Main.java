@@ -2,7 +2,7 @@ package n1exercici5;
 
 import java.io.*;
 
-public class SerializeAndDeserialize {
+public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 
