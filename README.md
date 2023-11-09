@@ -94,6 +94,7 @@ It is recommended to go according to the directory numbering order:
 * n1exercici3...
 
 3. __In "n1excercici4" I cannot find the directories.txt file__
+
 Check Your Desktop.
 
 
