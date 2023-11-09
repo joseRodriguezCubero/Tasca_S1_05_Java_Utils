@@ -16,6 +16,8 @@ You can build Maven, Gradle or just Java projects.
 Endavant!
 
 Level 1
+
+
 You can use Java exclusively, or use the Apache Commons IO library if you prefer.
 
 - Exercise 1
@@ -46,7 +48,10 @@ From the previous exercise, parameterize the following:
 
 Directory to arrive.
 Name and directory of the resulting TXT fitxer.
+
 Level 3
+
+
 - Exercise 1
 Create a utility that encrypts and decrypts the files resulting from the previous levels.
 
