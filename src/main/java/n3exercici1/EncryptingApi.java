@@ -9,7 +9,6 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 //Este ejercicio ha sido realizado con la ayuda de la siguiente web. https://www.baeldung.com/java-aes-encryption-decryption
-//El ejercicio lo tengo en un estado previo más simplificado pero no podía desencriptar correctamente. Solucionado por la IA CHat GPT.
 
 public class EncryptingApi {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
@@ -18,13 +17,10 @@ public class EncryptingApi {
 
         FileEncrypterDecrypter fileEncrypterDecrypter = new FileEncrypterDecrypter(secretKey, "AES/CBC/PKCS5Padding");
 
-        // Leer todo el contenido del archivo
         String contenidoOriginal = leerContenido("E:\\Programacion\\directories.txt");
 
-        // Cifrar y escribir el contenido cifrado en un nuevo archivo
         fileEncrypterDecrypter.encrypt(contenidoOriginal, "E:\\Programacion\\directories_cifrado.txt");
 
-        // Desencriptar el archivo cifrado (solo para verificar)
         String contenidoDesencriptado = fileEncrypterDecrypter.decrypt("E:\\Programacion\\directories_cifrado.txt");
         System.out.println("Contenido desencriptado:\n" + contenidoDesencriptado);
     }
